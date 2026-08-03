@@ -4,12 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run serve",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --port 3002 --strictPort",
+    "serve": "npm run build && npm run preview",
+    "start:standalone": "vite"
   },
   "dependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.1",
     "@tanstack/react-query": "^5.101.4",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
@@ -18,7 +21,6 @@
     "zustand": "^5.0.14"
   },
   "devDependencies": {
-    
     "@babel/core": "^7.29.7",
     "@eslint/js": "^10.0.1",
     "@rolldown/plugin-babel": "^0.2.3",
