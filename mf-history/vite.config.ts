@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
-
+import tailwindcss from '@tailwindcss/vite'
 const shared = {
   react: { singleton: true, requiredVersion: '^19.2.8', import: false },
   'react-dom': { singleton: true, requiredVersion: '^19.2.8', import: false },
@@ -20,6 +20,7 @@ export default defineConfig({
       },
       shared,
     }),
+    tailwindcss(),
   ],
   build: {
     modulePreload: false,

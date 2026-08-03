@@ -2,7 +2,10 @@ import React from 'react'
 
 function App() {
   return (
-    <h1>Detalle del pokemon</h1>
+    <div className='bg-background text-text'>
+    <h1>Detalle de
+      l pokemon</h1>
+      </div>
   )
 }
 
