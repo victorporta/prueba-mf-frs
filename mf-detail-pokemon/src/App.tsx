@@ -1,12 +1,19 @@
 import React from 'react'
 
-function App() {
+import { PokemonDetailPage } from './app/features/pokemon'
+import { QueryProvider } from './app/providers'
+import './index.css'
+
+export type PokemonDetailProps = {
+  id?: number
+}
+
+function PokemonDetail({ id }: Readonly<PokemonDetailProps>) {
   return (
-    <div className='bg-background text-text'>
-    <h1>Detalle de
-      l pokemon</h1>
-      </div>
+    <QueryProvider>
+      <PokemonDetailPage id={id} />
+    </QueryProvider>
   )
 }
 
-export default App
+export default PokemonDetail

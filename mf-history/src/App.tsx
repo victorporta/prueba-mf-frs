@@ -1,9 +1,10 @@
 import React from 'react'
 
-function App() {
-  return (
-    <h1>Historial de pokemons</h1>
-  )
+import { HistoryPage } from './app/features/history'
+import './index.css'
+
+function PokemonHistory() {
+  return <HistoryPage />
 }
 
-export default App
+export default PokemonHistory

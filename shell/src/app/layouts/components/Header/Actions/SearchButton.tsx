@@ -1,12 +1,20 @@
+import { useSearchStore } from '../../../../features/search'
+
 export type SearchButtonProps = {
   className?: string
 }
 
 export function SearchButton({ className = '' }: Readonly<SearchButtonProps>) {
+  const open = useSearchStore((state) => state.open)
+  const isOpen = useSearchStore((state) => state.isOpen)
+
   return (
     <button
       type="button"
+      onClick={open}
       aria-label="Buscar Pokémon"
+      aria-haspopup="dialog"
+      aria-expanded={isOpen}
       className={[
         'inline-flex size-10 items-center justify-center rounded-lg border border-border bg-surface text-text-secondary',
         'hover:bg-surface-secondary hover:text-text',

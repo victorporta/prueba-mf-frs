@@ -1,7 +1,7 @@
 import { ThemeToggle } from '../../../../features/theme'
+import { UserDropdown } from '../../../../features/auth'
 
 import { SearchButton } from './SearchButton'
-import { UserMenu } from './UserMenu'
 
 export type ActionsProps = {
   className?: string
@@ -16,7 +16,7 @@ export function Actions({ className = '' }: Readonly<ActionsProps>) {
     >
       <SearchButton />
       <ThemeToggle labels={false} />
-      <UserMenu />
+      <UserDropdown />
     </div>
   )
 }

@@ -1,6 +1,11 @@
 declare module 'pokemon-detail/PokemonDetail' {
   import type { ComponentType } from 'react'
-  const PokemonDetail: ComponentType
+
+  type PokemonDetailProps = {
+    id?: number
+  }
+
+  const PokemonDetail: ComponentType<PokemonDetailProps>
   export default PokemonDetail
 }
 

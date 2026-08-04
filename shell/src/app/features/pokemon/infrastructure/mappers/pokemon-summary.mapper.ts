@@ -17,10 +17,11 @@ export function mapListItemToPokemonSummary(
 export function mapPokemonDtoToSummary(dto: PokemonDto): PokemonSummary {
   const dreamWorld = dto.sprites.other.dream_world.front_default
   const officialArtwork = dto.sprites.other['official-artwork'].front_default
+  const frontDefault = dto.sprites.front_default
 
   return {
     id: dto.id,
     name: dto.name,
-    imageUrl: dreamWorld ?? officialArtwork ?? '',
+    imageUrl: dreamWorld ?? officialArtwork ?? frontDefault ?? '',
   }
 }

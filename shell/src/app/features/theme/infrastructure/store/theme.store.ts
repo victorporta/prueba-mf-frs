@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import type { Theme } from '../../domain/theme'
 
-const STORAGE_KEY = 'metrica-theme'
+const STORAGE_KEY = 'mf-theme'
 
 function getInitialTheme(): Theme {
   if (typeof window === 'undefined') return 'light'

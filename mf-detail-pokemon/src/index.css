@@ -55,3 +55,74 @@
       color 200ms ease,
       border-color 200ms ease;
   }
+
+@keyframes pokemon-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pokemon-image-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pokemon-stat-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.pokemon-detail-enter {
+  animation: pokemon-fade-up 0.45s ease-out both;
+}
+
+.pokemon-image-enter {
+  animation: pokemon-image-in 0.55s ease-out both;
+}
+
+.pokemon-detail-card {
+  transition:
+    transform 280ms ease,
+    box-shadow 280ms ease,
+    border-color 200ms ease;
+}
+
+.pokemon-detail-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 28px 70px -36px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-stat-bar {
+  transform-origin: left center;
+  animation: pokemon-stat-fill 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pokemon-detail-enter,
+  .pokemon-image-enter,
+  .pokemon-stat-bar,
+  .pokemon-detail-card,
+  .pokemon-detail-card:hover {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+}
+.pokemon-image-move {
+  animation: 2s ease 0s infinite normal none running bounce;
+}

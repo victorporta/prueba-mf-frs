@@ -21,15 +21,10 @@ export function Logo({
       ]
         .filter(Boolean)
         .join(' ')}
-      aria-label="Metrica — inicio"
+      aria-label="Pokédex — inicio"
     >
-      <span
-        aria-hidden
-        className="flex size-8 items-center justify-center rounded-lg bg-brand text-sm font-bold text-white"
-      >
-        M
-      </span>
-      <span>Metrica</span>
+
+      <span>Pokédex</span>
     </Link>
   )
 }

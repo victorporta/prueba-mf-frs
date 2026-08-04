@@ -1,4 +1,4 @@
-export { LoginPage, useAuthStore, type AuthUser } from './auth'
+export { LoginPage, ProtectedRoute, useAuthStore, type AuthUser } from './auth'
 export { PokemonCategories, WelcomeHeader } from './home'
 export {
   EmptyState,
@@ -23,6 +23,11 @@ export {
   type PokemonSummary,
   type PokemonType,
 } from './pokemon'
+export {
+  SearchModal,
+  useSearchStore,
+} from './search'
+export { LastVisitedToast, useLastVisitedToast } from './toast'
 export {
   useTheme,
   useThemeStore,
