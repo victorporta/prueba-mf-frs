@@ -72,7 +72,7 @@ Microfrontend responsable de visualizar el historial de Pokémon visitados.
 Clonar el repositorio.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/victorporta/prueba-mf-frs
 ```
 
 Instalar las dependencias de cada aplicación.
