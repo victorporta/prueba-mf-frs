@@ -49,3 +49,9 @@
     --color-error: #ef5350;
     --color-info: #4fc3f7;
   }
+  * {
+    transition:
+      background-color 200ms ease,
+      color 200ms ease,
+      border-color 200ms ease;
+  }
